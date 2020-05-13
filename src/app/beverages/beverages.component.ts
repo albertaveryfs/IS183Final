@@ -28,13 +28,8 @@ export class BeveragesComponent implements OnInit {
     this.router.navigate(['beverage-create']);
   }
 
-  async deleteBeverage(id: string) {
-    const resp = await this.beverageService.deleteBeverage(id);
-    if (resp) {
-      this.beverages = this.beverages.filter((book) => {
-        return book['id'] !== id;
-      });
-    }
+  deleteBeverage(id: string) {
+
   }
 
 }
